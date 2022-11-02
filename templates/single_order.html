@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Order</title>
-</head>
-
-<body>
-
-    <h1>Customer Order</h1>
-    <p>Customer Name: {{order.customer_name}}</p>
-    <p>Order Date: {{order.order_date}}</p>
-    <p>Title: {{order.book_title}}. Quantity: {{order.quantity}}</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Order</title>
+    </head>
+    <header class="header1">
+        <h1>Shop Orders</h1><br>
+    </header>
+    <body>
+        <div class="header2">
+            <h2>Customer Order</h2>
+        </div>
+        <br><br>
+        <div class="container">
+        <div class="list_div"><div class="child1"><b>Order:</b> {{ orders.index(order) }}</div><div class="child_1"><b>Date:</b> {{ order.order_date }}</div><div class="child2"><b>Customer:</b> {{ order.customer_name }} </div><div class="child2_"><b>Title:</b> {{ order.book_title }}</div><div class="child2__"><b>Quantity:</b> {{ order.quantity }}</div></div>
+        </div>
+        <br>
+        <div id="link-home">
+            <button><a href="/orders">Home</a></button>
+        </div>
+    </body>
 
 </html>

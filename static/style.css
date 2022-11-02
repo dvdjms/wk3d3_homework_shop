@@ -1,5 +1,112 @@
-#container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+body {
+    margin-top: 0px;
+    font-family: Helvetica, sans-serif;
 }
+
+.header1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+  
+}
+.header > h1 {
+    margin-top: 0%;
+
+}
+.header2 {
+    text-align: center;
+    background-color: darkred;
+    color: white;
+    padding: 5px;
+  
+}
+
+.container {
+    width: 55%;
+    margin: auto;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+.list_div {
+    height: 60px;
+    justify-content: center;
+    border-color: darkred;
+    border-style:double;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(239, 217, 217);
+}
+#list_div:hover {
+    background-color: rgb(209, 181, 181);
+}
+
+.child1 {
+    float: left;
+    width: 66.3%;
+    height: 20px;
+    padding: 5px
+}
+
+.child_1 {
+    float: left;
+    text-align: left;
+    width: 25%;
+    height: 20px;
+    padding: 5px
+}
+
+.child2 {
+    float: left;
+    width: 35%;
+    height: 20px;
+    padding: 5px
+}
+
+.child2_ {
+    float: left;
+    width: 30%;
+    height: 20px;
+    padding: 5px
+}
+
+.child2__ {
+    float: left;
+    width: 20%;
+    height: 20px;
+    padding: 5px
+}
+
+button {
+    border-color: darkred;
+    background-color: rgb(239, 217, 217);
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    height: 35px;
+    width: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#link-home {
+    width: 75%;
+    text-align: right;
+    float: right;
+    margin-right: 23%;
+    
+}
+
+button:hover {
+    background-color: rgb(209, 181, 181);
+}
+
+

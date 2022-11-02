@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-
-<body>
-    <h1>Shop Orders</h1>
-    <h2>Today's Customer Orders</h2>
-    {% for order in orders %}
-    <div id="container">
-        <ul>
-            <!-- <li><b><a href="/orders/{{order.order_number}}" >Order Number: {{order.order_number}}</a></b> Customer Name: {{order.customer_name}}, Order Date: {{order.order_date}}, Title: {{order.book_title}}, Quantity: {{order.quantity}}</li> -->
-            <li><b><a href="/orders/{{ orders.index(order) }}" >Order Number: {{ orders.index(order) }}</a></b> Customer Name: {{ order.customer_name }}, Order Date: {{ order.order_date }}, Title: {{ order.book_title }}, Quantity: {{ order.quantity }}</li>
-        </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <header class="header1">
+        <h1>Shop Orders</h1><br>
+    </header>
+   <body>
+    <div class="header2">
+        <h2>Today's Customer Orders</h2>
     </div>
+    
+    <br>
+    {% for order in orders %}
+    <a href="/orders/{{ orders.index(order) }}">
+        <div class="container">
+            <ul>
+                <li><div class="list_div" id="list_div"><div class="child1"><b>Order:</b> {{ orders.index(order) }}</div><div class="child_1"><b>Date:</b> {{ order.order_date }}</div><div class="child2"><b>Customer:</b> {{ order.customer_name }} </div><div class="child2_"><b>Title:</b> {{ order.book_title }}</div><div class="child2__"><b>Quantity:</b> {{ order.quantity }}</div></div></li>
+            </ul>
+        </div>
+    </a>
     {% endfor %}
 
 </body>

@@ -9,6 +9,6 @@ def index():
 
 @app.route('/orders/<order_num>')
 def single_order(order_num):
-    return render_template('single_order.html', order = orders[int(order_num)])
+    return render_template('single_order.html', order = orders[int(order_num)], orders = orders)
         
   
