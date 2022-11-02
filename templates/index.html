@@ -12,21 +12,18 @@
         <h1>Shop Orders</h1><br>
     </header>
    <body>
-    <div class="header2">
-        <h2>Today's Customer Orders</h2>
-    </div>
-    
-    <br>
-    {% for order in orders %}
-    <a href="/orders/{{ orders.index(order) }}">
-        <div class="container">
-            <ul>
-                <li><div class="list_div" id="list_div"><div class="child1"><b>Order:</b> {{ orders.index(order) }}</div><div class="child_1"><b>Date:</b> {{ order.order_date }}</div><div class="child2"><b>Customer:</b> {{ order.customer_name }} </div><div class="child2_"><b>Title:</b> {{ order.book_title }}</div><div class="child2__"><b>Quantity:</b> {{ order.quantity }}</div></div></li>
-            </ul>
+        <div class="header2">
+            <h2>Today's Customer Orders</h2>
         </div>
-    </a>
-    {% endfor %}
-
-</body>
-
+        <br>
+        {% for order in orders %}
+        <a href="/orders/{{ orders.index(order) }}">
+            <div class="container">
+                <ul>
+                    <li><div class="list_div" id="list_div"><div class="child1"><b>Order:</b> {{ orders.index(order) }}</div><div class="child_1"><b>Date:</b> {{ order.order_date }}</div><div class="child2"><b>Customer:</b> {{ order.customer_name }} </div><div class="child2_"><b>Title:</b> {{ order.book_title }}</div><div class="child2__"><b>Quantity:</b> {{ order.quantity }}</div></div></li>
+                </ul>
+            </div>
+        </a>
+        {% endfor %}
+    </body>
 </html>
